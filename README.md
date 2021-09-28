@@ -1,5 +1,7 @@
 # Projet - Prix de l'immobilier
 
+Le code source de ce projet est également disponible sur Github à partir de ce [lien](https://github.com/faniryxx/projet-python-cipa).
+
 ## Objectif du projet
 Le but de ce projet est de réaliser un programme en Python permettant de traiter et d'afficher des données stockées à partir de fichiers .txt à récupérer [ici](https://www.data.gouv.fr/en/datasets/demandes-de-valeurs-foncieres/), sans importer de module externe.
 
@@ -8,7 +10,9 @@ Le but de ce projet est de réaliser un programme en Python permettant de traite
 ## Structuration du projet
 Selon le sujet du projet, le programme réalisé devait pouvoir réaliser *l'affichage des ventes de maisons pour une commune et année données*, et *l'affichage des communes les plus chères*.
 
-Conformément au cahier des charges, nous avons développé les fonctions suivantes: *mean, splitLineTable, splitLineDictionary* et *displayFunction*.
+Conformément au cahier des charges
+
+, nous avons développé les fonctions suivantes: *mean, splitLineTable, splitLineDictionary* et *displayFunction*.
 
 En addition à ces fonctions là, pour le bon fonctionnement du programme et pour pour augmenter la lisibilité du code, nous avons rajouté quelques fonctions non demandées par le cahier de charges:
 - *sortDates*: Trie un tableau selon l'ordre chronologique du champ date mutation
