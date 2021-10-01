@@ -10,9 +10,7 @@ Le but de ce projet est de réaliser un programme en Python permettant de traite
 ## Structuration du projet
 Selon le sujet du projet, le programme réalisé devait pouvoir réaliser *l'affichage des ventes de maisons pour une commune et année données*, et *l'affichage des communes les plus chères*.
 
-Conformément au cahier des charges
-
-, nous avons développé les fonctions suivantes: *mean, splitLineTable, splitLineDictionary* et *displayFunction*.
+Conformément au cahier des charges, nous avons développé les fonctions suivantes: *mean, splitLineTable, splitLineDictionary* et *displayFunction*.
 
 En addition à ces fonctions là, pour le bon fonctionnement du programme et pour pour augmenter la lisibilité du code, nous avons rajouté quelques fonctions non demandées par le cahier de charges:
 - *sortDates*: Trie un tableau selon l'ordre chronologique du champ date mutation
@@ -24,6 +22,7 @@ Une description de chacune des fonctions présentes est disponible dans le docst
 ## Explication des calculs pour "Affichage des communes les plus chères"
 Afin d'afficher les communes les plus chères selon un département et une année, il est nécessaire d'effectuer certains traitements avec les données. Les valeurs que vous pourrez retrouver grâce à ce programme sont issues des traitements qui vous seront décrits ci-dessous.
 - Récupération des valeurs : 
+    - Les données récupérées ne correspondent qu'aux parcelles cadastrales où une maison est vendue.
     - Les parcelles cadastrales sont rangées selon les communes auquelles elles correspondent.
     - Chaque parcelle cadastrale possède une surface bati. ainsi qu'une valeur foncière.
         - Dans l'hypothèse où la valeur foncière n'a pas de valeur, la valeur par défaut sera 0,0
