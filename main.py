@@ -199,7 +199,7 @@ def displayTown(annee, code, nbr):
     
 
 def launcher():
-    """Gère le déroulement du programme"""
+    """Gère le déroulement du programme, et évite les entrées invalides"""
     print("Quelle fonction voulez-vous lancer ?")
     print("Question 1 : Afficher toutes les ventes de maisons pour un code INSEE donné et une année")
     print("Question 2 : Afficher les villes les plus chères pour un département donné")
@@ -208,14 +208,46 @@ def launcher():
         choix = input('Votre choix: ')
         if choix == '1' :
             retry = False
-            annee = input("Quelle année : ")
-            insee = input("INSEE de la ville : ")
+            while(True):
+                annee = input("Quelle année : ")
+                if annee.isdigit():
+                    if int(annee) < 2021 and int(annee) > 2015:
+                        break
+                    else :
+                        print("Mauvaise entrée")
+                else :
+                    print("Mauvaise entrée")
+            while(True):
+                insee = input("INSEE de la ville : ")
+                if(insee.isdigit()): 
+                    if int(insee) > 0 and int(insee) < 10000:
+                        break
+                else :
+                    print("Mauvaise entrée")
             displayFunction(int(annee), insee)
         elif choix == '2':
             retry = False
-            annee = input("Quelle année : ")
-            departement = input("Code du département : ")
-            nbr = input("Nombre de villes à afficher : ")
+            while(True):
+                annee = input("Quelle année : ")
+                if annee.isdigit():
+                    if int(annee) < 2021 and int(annee) > 2015:
+                        break
+                    else :
+                        print("Mauvaise entrée")
+                else :
+                    print("Mauvaise entrée")
+            while(True):
+                departement = input("Code du département : ")
+                if(departement.isdigit()): 
+                    break
+                else :
+                    print("Mauvaise entrée")
+            while(True):
+                nbr = input("Nombre de villes à afficher : ")
+                if(nbr.isdigit()): 
+                    break
+                else :
+                    print("Mauvaise entrée")
             displayTown(int(annee), departement, int(nbr))
         else:
             print("Mauvaise entrée")
