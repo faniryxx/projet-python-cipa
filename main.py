@@ -130,7 +130,7 @@ def sortDates(table):
 # 2. Affichage des communes les plus chères
 
 def displayTown(annee, code, nbr):
-    """Affiche les N villes les plus cher d'un département et d'une année 
+    """Affiche les N villes les plus chères d'un département et d'une année 
     
     Paramètres:
     annee (int): année correspondant à la requête
@@ -200,22 +200,22 @@ def displayTown(annee, code, nbr):
 
 def launcher():
     """Gère le déroulement du programme"""
-    print("Quelle fonction voulez vous lancer ?")
-    print("1 : Afficher toute les ventes de maisons pour un insee donné et une année")
-    print("2 : Afficher les villes les plus cher pour un département donnné")
+    print("Quelle fonction voulez-vous lancer ?")
+    print("Question 1 : Afficher toutes les ventes de maisons pour un code INSEE donné et une année")
+    print("Question 2 : Afficher les villes les plus chères pour un département donné")
     retry = True
-    while(retry == True):
+    while(retry):
         choix = input('Votre choix: ')
         if choix == '1' :
             retry = False
             annee = input("Quelle année : ")
-            insee = input("INSEEE de la ville : ")
+            insee = input("INSEE de la ville : ")
             displayFunction(int(annee), insee)
         elif choix == '2':
             retry = False
             annee = input("Quelle année : ")
-            departement = input("Code du departement : ")
-            nbr = input("Nombre de ville à afficher : ")
+            departement = input("Code du département : ")
+            nbr = input("Nombre de villes à afficher : ")
             displayTown(int(annee), departement, int(nbr))
         else:
             print("Mauvaise entrée")
